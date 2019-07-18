@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 int score=0;
 int foodX=100;
 int foodY=20;
@@ -45,4 +46,11 @@ void checkCatch(int x, int y){
      else if (foodY > height && score > 0){
           score--;
      }
+
+fill(0, 0, 0);
+textSize(16);
+text("Score: " + score, 20, 20);
+if(score>=100){
+  JOptionPane.showMessageDialog(null,"YOU WON");
+}
 }
